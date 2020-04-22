@@ -1,0 +1,18 @@
+Colecciones en Java, Una colección es un grupo de objetos individuales representados como una sola unidad. 
+Java proporciona el Framework de colección que define varias clases e interfaces para representar un grupo de 
+objetos como una sola unidad. https://www.geeksforgeeks.org/collections-in-java-2/ 
+https://beginnersbook.com/java-collections-tutorials/#1 
+Clase Automóvil Automovil 
+- String Marca 
+- String Modelo 
+- String Precio 
+- void encender(int gas) 
++ String alto() 
++ String movimiento(String mov) 
+
+Clase main • 
+Agregar 10 Automoviles a un ArrayList • 
+Imprimir las propiedades y mensajes de cada automóvil • 
+Movimiento(mov) también será capturado desde el teclado junto con las propiedades con Scannner • 
+Usar constructor para ejecutar el método encender • 
+Usar for each de preferencia, if para validar la gasolina > 1 
