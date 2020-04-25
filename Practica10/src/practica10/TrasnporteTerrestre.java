@@ -5,7 +5,6 @@ public abstract class TrasnporteTerrestre {
     private String modelo;
     public int gas;
 
-    @Deprecated
     public void encender(int gas) {
         this.gas = gas;
     }

@@ -1,22 +1,6 @@
 #include<stdio.h>
-
-int contar_palabras(char cadena[30]){
-  int i;
-  int espacios=0;
-  //Recorrer cadena
-  printf("%s", cadena);
-  for(i=0;cadena[i]!='\0';i++){
-    //Contar espacios
-    //cadena[i][j+1] != ' ' se asegura de dos espacios juntos mas de una vez
-    //Tambien aplica para mas de dos espacios
-    if(cadena[i]==' ' && cadena[i+1] != ' '){
-      espacios++;
-    }//if contador de espacios
-  }//for cadena
-  return espacios+1;
-}
 int main(){
-  int n, i;
+  int n, i,j, espacios;
   printf("Ingresa el numero de cadenas a caputrar: ");
   scanf("%d", &n);
 
@@ -34,9 +18,20 @@ int main(){
 
   //Recorrer arreglo de cadenas para contar palabras
   for(i=0; i<n; i++){
+    printf("%s", cadenas[i]);
+    espacios = 0;
+    //Recorrer cadena
+    for(j=0;cadenas[i][j]!='\0';j++){
+      //Contar espacios
+      //cadenas[i][i][j+1] != ' ' se asegura de dos espacios juntos mas de una vez
+      //Tambien aplica para mas de dos espacios
+      if(cadenas[i][j]==' ' && cadenas[i][j+1] != ' '){
+        espacios++;
+      }//if contador de espacios
+    }//for cadena
     //Guardar el numero de palabras de la cadena i en el indice i de counter
-    counter[i] = contar_palabras(cadenas[i]);
-  }
+    counter[i] = espacios+1;
+  }//for arreglo de cadens
 
   //Encontrar string con mas palabras, recorriendo el contador
   int max=0;
