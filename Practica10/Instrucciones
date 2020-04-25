@@ -5,8 +5,10 @@ revisar los links y definir métodos para ejemplificar las anotaciones como
 @Documented 
 @ Custom Annotation (Definir una personalizada) 
 @Override 
-estas anotaciones pueden ir en cualquier 
-clase Desarrollar clase padre (Abstracta) llamada: TransporteTerrestre 
+estas anotaciones pueden ir en cualquier clase 
+Desarrollar 
+
+clase padre (Abstracta) llamada: TransporteTerrestre 
 Agregar y encapsular las propiedades modelo y marca Con los metodos 
 + void Encender (int gas), 
 + String Apagar() 
