@@ -1,49 +1,78 @@
 package practica8;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
+
+import practica8.DispositivoElectronico;
 
 public class Practica8 {
     public static void main(String[] args) {
-        // Inicializar scanner
+        int i;
         Scanner sc = new Scanner(System.in);
-        // Crear array list
-        ArrayList autos = new ArrayList();
-        // Ciclo for en el que se pedira la informacion de los 10 autos que seran
-        // agregados a la lista
-        for (int i = 0; i < 2; i++) {
-            // Darle formato al String para incluir, el nuumero del auto que sera anadido
-            System.out.print(String.format("\nAutomovil numero %d", i + 1));
-            // Llamar a constructor del objeto Automovil
-            Automovil auto = new Automovil(10);
-            // Llenar los atributos del objeto, con los vaolres indicados por el usuario
-            System.out.print("\nIngresa la marca del automvil: ");
-            auto.setMarca(sc.nextLine());
-            System.out.print("Ingresa el modelo del automovil: ");
-            auto.setModelo(sc.nextLine());
-            System.out.print("Ingresa el precio del automovil: ");
-            auto.setPrecio(sc.nextLine());
-            // Agregar nuevo objeto a la lista
-            autos.add(auto);
+        // Crear objeto telefono y configurar con los atributos senalados
+        Telefono tel = new Telefono();
+        System.out.println("\nCreando telefono: ");
+        System.out.print("Ingresa la marca del telefono: ");
+        tel.setMarca(sc.nextLine());
+        System.out.print("Ingresa el modelo del telefono: ");
+        tel.setModelo(sc.nextLine());
+        System.out.print("Ingresa el color del telefono: ");
+        tel.setColor(sc.nextLine());
+        System.out.print("Ingresa el precio del telefono: ");
+        tel.setPrecio(sc.nextFloat());
+        // Limpiar buffer
+        sc.nextLine();
+        // Crear arreglo de contactos con la informacion ingresada por el usuario
+        System.out.println("\nCrear contactos:");
+        Contacto[] contactos = new Contacto[5];
+        for (i = 0; i < 0; i++) {
+            contactos[i] = new Contacto();
+            System.out.println(String.format("\nContacto %d:", i + 1));
+            System.out.print("Telefono: ");
+            contactos[i].setTelefono(sc.nextLine());
+            System.out.print("Nombre: ");
+            contactos[i].setNombre(sc.nextLine());
+            System.out.print("Correo electronico: ");
+            contactos[i].setMail(sc.nextLine());
         }
-        // Imprimir los atributos y llamar las funciones de cada objeto Automovil en el
-        // array list
-        for (Object objectAuto : autos) {
-            // Convertir el elemento del array a tipo auto, y guardar la referencia en una
-            // nueva variable
-            // De esta manera Java va a saber de que tipo de objeto estamos hablando
-            Automovil auto = (Automovil) objectAuto;
-            // Imprimir el numero del automovil en el orden en que se ingreso
-            System.out.println(String.format("\nAutomovil %d", (autos.indexOf(auto) + 1)));
-            // Imprimir los atributos y llamar a los metodos de la clase Automovil
-            System.out.println("Marca: " + auto.getMarca());
-            System.out.println("Modelo: " + auto.getModelo());
-            System.out.println("Precio: " + auto.getPrecio());
-            // Preguntar al usario por la direccion en que desea moverse
-            System.out.println("Ingresa la direccion en la que el auto tiene que moverse: ");
-            System.out.println(auto.movimiento(sc.nextLine()));
-            System.out.println(auto.alto());
+        System.out.println("\n");
+        System.out.println(tel.encender());
+        // Pedir por la contrasena de la red inalambrica
+        System.out.println("Ingrese la contrasena de la red wifi: ");
+        System.out.println("(hint)a=b abc");
+        System.out.println(tel.wifiCon(sc.nextLine()));
+
+        // Realizar una llamada a un contacto si el usario lo desea, a un numero
+        // especifico de lo contrario
+        System.out.println("\nDesea llamar a alguien de su lista de contactos?(s/n): ");
+        if (sc.nextLine().startsWith("s")) {
+            System.out.println("Eliga un contacto:");
+            i = 0;
+            for (Contacto contact : contactos) {
+                System.out.println(String.format("%d %s", ++i, contact.getNombre()));
+            }
+            do {
+                i = sc.nextInt() - 1;
+            } while (i < 0 || i > 4);
+            System.out.println(tel.iniciar_llamada(contactos[i].getNombre()));
+        } else {
+            System.out.println("Escriba el numero que desea llamar: ");
+            System.out.println(tel.iniciar_llamada(sc.nextInt()));
         }
+        System.out.println(tel.finalizar_llamada());
+        tel.apagar();
+        // Limpiar buffer
+        sc.nextLine();
+        // Crear nuevo telefono usando las caracteristicas del polimorfismo
+        System.out.println("\nNuevo telefono: ");
+        DispositivoElectronico ntel = new Telefono();
+        System.out.println("Ingresa la marca del telefono: ");
+        ntel.setMarca(sc.nextLine());
+        System.out.println("Ingresa el modelo del telefono: ");
+        ntel.setModelo(sc.nextLine());
+        System.out.println("Informacion del telefono:");
+        System.out.println(String.format("Marca: %s", ntel.getMarca()));
+        System.out.println(String.format("Modelo: %s", ntel.getModelo()));
+        System.out.println(ntel.encender());
+        System.out.println(ntel.apagar());
     }
 }

@@ -1,15 +1,19 @@
-package practica10;
+package practica11;
 
-public abstract class TrasnporteTerrestre {
+public abstract class TransporteTerrestre {
     private String marca;
     private String modelo;
+    // Atributo en desuso
+    @Deprecated
     public int gas;
 
+    // Funcion en obsoleta por variable en desuso
+    @Deprecated
     public void encender(int gas) {
         this.gas = gas;
     }
 
-    public String Apagar() {
+    public String apagar() {
         return "El vehiculo se ha apagado";
     }
 

@@ -1,21 +1,17 @@
-Java Annotations https://beginnersbook.com/2014/09/java-annotations/ 
-https://www.geeksforgeeks.org/annotations-in-java/ 
-revisar los links y definir métodos para ejemplificar las anotaciones como 
-@Deprecated 
-@Documented 
-@ Custom Annotation (Definir una personalizada) 
-@Override 
-estas anotaciones pueden ir en cualquier clase 
-Desarrollar 
+Generics en Java, https://docs.oracle.com/javase/tutorial/java/generics/index.html 
+https://www.geeksforgeeks.org/generics-in-java/ 
+Clase Automóvil Automovil 
+- String Marca 
+- String Modelo 
+- String Precio 
+- void encender(int gas) 
++ String alto() 
++ String movimiento(String mov) 
 
-clase padre (Abstracta) llamada: TransporteTerrestre 
-Agregar y encapsular las propiedades modelo y marca Con los metodos 
-+ void Encender (int gas), 
-+ String Apagar() 
-
-Heredar en Clase Automovil 
-Agregar método avanzar (int gas) 
-Agregar y encapsular las propiedades precio 
-
-Clase main 
-Listar las propiedades y métodos en una secuencia lógica e indicar en el print el tipo de annotation utilizada 
+Clase main • 
+Definir una ArrayList genérico de Automoviles • 
+Agregar 10 Automoviles a un ArrayList • 
+Imprimir las propiedades y mensajes de cada automóvil • 
+Movimiento(mov) también será capturado desde el teclado junto con las propiedades con Scannner • 
+Usar constructor para ejecutar el método encender • 
+Usar for each de preferencia, if para validar la gasolina > 1 

@@ -1,18 +1,35 @@
-Colecciones en Java, Una colección es un grupo de objetos individuales representados como una sola unidad. 
-Java proporciona el Framework de colección que define varias clases e interfaces para representar un grupo de 
-objetos como una sola unidad. https://www.geeksforgeeks.org/collections-in-java-2/ 
-https://beginnersbook.com/java-collections-tutorials/#1 
-Clase Automóvil Automovil 
-- String Marca 
-- String Modelo 
-- String Precio 
-- void encender(int gas) 
-+ String alto() 
-+ String movimiento(String mov) 
+clase Abtract DispositivoElectronico 
+-String marca 
+-String modelo 
++String Abstract encender() 
++String Abstract apagar() 
 
-Clase main • 
-Agregar 10 Automoviles a un ArrayList • 
-Imprimir las propiedades y mensajes de cada automóvil • 
-Movimiento(mov) también será capturado desde el teclado junto con las propiedades con Scannner • 
-Usar constructor para ejecutar el método encender • 
-Usar for each de preferencia, if para validar la gasolina > 1 
+1 interface IWiFiConexion 
++ String wifiCon (String psswd) 
+
+Contacto 
+-String nombre 
+-String telefono 
+-String passwd 
+-String mail 
+Telefono 
+-float precio 
+-String color 
+-String iniciar_Llamada(int num)    //didnt declared it as private
+-String iniciar_Llamada(String name) //didnt declared it as private
+-String finalizar_Llammada() //didnt declared it as private
+Main Contacto[] contact = new Contacto[]; 
+Telefono[] tel = new Telefono[]; 
+for (){ 
+    concatc[i] = new Contacto(); 
+    contact[i].setNombre("Jorge")
+    contact.setNumber(42352243262); 
+    iniciar objeto[] 
+    tel.iniciar_Llamada(contact[].getNombre()) 
+    tel.iniciar_Llamada(contact.getNumber()) } 
+
+hacer un arreglo de Telefono, 5 elementos e imprimir las propiedades y metodos 
+Encender 
+IniciarLlamada + variable 
+Finalizar Llamada 
+Polimorfismo DispositivoElectronico con telefono imprimir los metodos 

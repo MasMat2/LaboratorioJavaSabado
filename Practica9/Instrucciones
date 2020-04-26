@@ -1,5 +1,7 @@
-Generics en Java, https://docs.oracle.com/javase/tutorial/java/generics/index.html 
-https://www.geeksforgeeks.org/generics-in-java/ 
+Colecciones en Java, Una colección es un grupo de objetos individuales representados como una sola unidad. 
+Java proporciona el Framework de colección que define varias clases e interfaces para representar un grupo de 
+objetos como una sola unidad. https://www.geeksforgeeks.org/collections-in-java-2/ 
+https://beginnersbook.com/java-collections-tutorials/#1 
 Clase Automóvil Automovil 
 - String Marca 
 - String Modelo 
@@ -9,7 +11,6 @@ Clase Automóvil Automovil
 + String movimiento(String mov) 
 
 Clase main • 
-Definir una ArrayList genérico de Automoviles • 
 Agregar 10 Automoviles a un ArrayList • 
 Imprimir las propiedades y mensajes de cada automóvil • 
 Movimiento(mov) también será capturado desde el teclado junto con las propiedades con Scannner • 
