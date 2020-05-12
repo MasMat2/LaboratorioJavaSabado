@@ -3,10 +3,12 @@ package practica9i;
 public class Movil extends Telefono implements DispositivoElectronico {
     private int precio;
 
+    @Override
     public String encender() {
         return "El telefono se ha encendido";
     }
 
+    @Override
     public String apagar() {
         return "El telefono se ha apagado";
     }

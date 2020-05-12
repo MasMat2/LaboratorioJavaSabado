@@ -11,7 +11,7 @@ public class Practica9i {
         String[] elements = new String[3];
         ArrayList telefonos = new ArrayList();
 
-        for (i = 0; i < 2; i++) {
+        for (i = 0; i < 5; i++) {
             Movil nuevo_movil = new Movil();
             System.out.println(String.format("Movil %d", i + 1));
             System.out.print("\tIngresa el nombre: ");
@@ -28,21 +28,23 @@ public class Practica9i {
             System.out.print("\tEstas son las propiedades del telefono: ");
             j = 0;
             for (String element : nuevo_movil.propiedades(elements)) {
-                j++;
                 System.out.print(String.format("\n\t%s: %s", propiedades[j], element));
+                j++;
             }
             System.out.println();
             telefonos.add(nuevo_movil);
         }
         // Imprimir los atributos y llamar las funciones de cada objeto Movil en el
         // array list
+        j = 0;
         for (Object objectMovil : telefonos) {
             // Convertir el elemento del array a tipo movil, y guardar la referencia en una
             // nueva variable
             // De esta manera Java va a saber de que tipo de objeto estamos hablando
             Movil movil = (Movil) objectMovil;
+            System.out.println(String.format("\nTelefono %d", ++j));
             System.out.println(String.format("Precio del telefono %d", movil.getPrecio()));
-            System.out.println(String.format("Modelo del telefono %d", movil.getModelo()));
+            System.out.println(String.format("Modelo del telefono %s", movil.getModelo()));
             System.out.println(movil.encender());
             System.out.println("Ingresa el numero al que deseas marcar: ");
             movil.hacerLlamada(sc.nextInt());
