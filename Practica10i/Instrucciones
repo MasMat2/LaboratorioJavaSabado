@@ -1,0 +1,22 @@
+Practica Usar la practica anterior como base, 
+
+public class MovilApple extends Telefono implements DispositivoElectronico{ 
+public class MovilSamsung extends Telefono implements DispositivoElectronico{ 
+
+en la clase con el método main() crear: ArrayList genérico de telefono 
+Llenar propiedades y métodos de 2 elementos en el arraylist de cada clase 
+Imprimir los resultados en orden lógico 
+/* iPnone11 Negro 40 Pixeles Video 20000.0 
+Telefono ON 
+Haciendo Llamada 2342352345 
+Finalizando Llamada Off */ 
+
+Concluir si se puede imprimir todo o no, 
+describir con sustento por que no, por que si que pasa
+
+Tenemos que crear un array para ambas clases y definirlo de tipo Telefono, 
+para poder almacenar MovilApple y MovilSamsung
+
+O creamos dos arraylist uno exclusivamente para objetos tipo MovilApple y otro para objetos MovilSamsung
+
+Usaremos anotaciones en alguna parte del programa?

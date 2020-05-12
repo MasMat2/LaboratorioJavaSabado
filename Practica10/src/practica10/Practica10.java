@@ -26,6 +26,7 @@ public class Practica10 {
             System.out.print("Ingresa el precio del automovil: ");
             autos.get(i).setPrecio(sc.nextLine());
         }
+        Collections.sort(autos);
         // Imprimir los atributos y llamar las funciones de cada objeto Automovil en el
         // array list
         for (Automovil auto : autos) {
