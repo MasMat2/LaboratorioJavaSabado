@@ -9,8 +9,8 @@ public class Movil extends Telefono implements DispositivoElectronico {
     }
 
     @Override
-    public String apagar() {
-        return "El telefono se ha apagado";
+    public void apagar() {
+        System.out.print("El telefono se ha apagado");
     }
 
     public void hacerLlamada(int tel) {

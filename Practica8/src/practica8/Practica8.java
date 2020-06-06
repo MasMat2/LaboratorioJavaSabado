@@ -24,7 +24,7 @@ public class Practica8 {
         // Crear arreglo de contactos con la informacion ingresada por el usuario
         System.out.println("\nCrear contactos:");
         Contacto[] contactos = new Contacto[5];
-        for (i = 0; i < 0; i++) {
+        for (i = 0; i < 5; i++) {
             contactos[i] = new Contacto();
             System.out.println(String.format("\nContacto %d:", i + 1));
             System.out.print("Telefono: ");

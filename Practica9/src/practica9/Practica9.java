@@ -12,7 +12,7 @@ public class Practica9 {
         ArrayList autos = new ArrayList();
         // Ciclo for en el que se pedira la informacion de los 10 autos que seran
         // agregados a la lista
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 10; i++) {
             // Darle formato al String para incluir, el nuumero del auto que sera anadido
             System.out.print(String.format("\nAutomovil numero %d", i + 1));
             // Llamar a constructor del objeto Automovil

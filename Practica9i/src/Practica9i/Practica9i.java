@@ -11,7 +11,7 @@ public class Practica9i {
         String[] elements = new String[3];
         ArrayList telefonos = new ArrayList();
 
-        for (i = 0; i < 5; i++) {
+        for (i = 0; i < 1; i++) {
             Movil nuevo_movil = new Movil();
             System.out.println(String.format("Movil %d", i + 1));
             System.out.print("\tIngresa el nombre: ");
@@ -37,23 +37,36 @@ public class Practica9i {
         // Imprimir los atributos y llamar las funciones de cada objeto Movil en el
         // array list
         j = 0;
+        Object contacto;
         for (Object objectMovil : telefonos) {
             // Convertir el elemento del array a tipo movil, y guardar la referencia en una
             // nueva variable
             // De esta manera Java va a saber de que tipo de objeto estamos hablando
             Movil movil = (Movil) objectMovil;
             System.out.println(String.format("\nTelefono %d", ++j));
-            System.out.println(String.format("Precio del telefono %d", movil.getPrecio()));
-            System.out.println(String.format("Modelo del telefono %s", movil.getModelo()));
-            System.out.println(movil.encender());
-            System.out.println("Ingresa el numero al que deseas marcar: ");
-            movil.hacerLlamada(sc.nextInt());
+            System.out.println(String.format("\tPrecio del telefono %d", movil.getPrecio()));
+            System.out.println(String.format("\tModelo del telefono %s", movil.getModelo()));
+            System.out.println(String.format("\t%s", movil.encender()));
+
+            System.out.print("\tIngresa el numero al que deseas marcar: ");
+            contacto = sc.nextInt();
+            System.out.print("\t");
+            movil.hacerLlamada((int) contacto);
             sc.nextLine();
+
+            System.out.print("\t");
             movil.finalizarLlamada();
-            System.out.println("Ingresa el nombre del contacto al que deseas marcar: ");
-            movil.hacerLlamada(sc.nextLine());
+
+            System.out.print("\tIngresa el nombre del contacto al que deseas marcar: ");
+            contacto = sc.nextLine();
+            System.out.print("\t");
+            movil.hacerLlamada((String) contacto);
+
+            System.out.print("\t");
             movil.finalizarLlamada();
-            System.out.println(movil.apagar());
+
+            System.out.print("\t");
+            movil.apagar();
         }
     }
 }

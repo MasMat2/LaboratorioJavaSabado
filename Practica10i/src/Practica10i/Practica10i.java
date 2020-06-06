@@ -12,13 +12,15 @@ public class Practica10i {
         String[] elements = new String[3];
         ArrayList<Telefono> telefonos = new ArrayList<>();
 
-        for (i = 0; i < 2; i++) {
-            if (i < 2) {
+        for (i = 0; i < 4; i++) {
+            System.out.println();
+            if ((i % 2) == 0) {
+                System.out.print("Creando telefono de tipo Apple: \n");
                 nuevo_movil = new MovilApple();
             } else {
+                System.out.print("Creando telefono de tipo Samsung: \n");
                 nuevo_movil = new MovilSamsung();
             }
-            System.out.println(String.format("Movil %d", i + 1));
             System.out.print("\tIngresa el nombre: ");
             elements[0] = sc.nextLine();
             System.out.print("\tIngresa el modelo: ");
@@ -40,6 +42,14 @@ public class Practica10i {
         // array list
         j = 0;
         for (Telefono movil : telefonos) {
+            // Ya que la declaracion generica de tipo dentro del ArrayList fue de tipo
+            // Telefono
+            // Solo podemos usar los metodos de encapsulamiento del atributo modelo
+            // Y el metodo de propiedades que fue usado arriba
+            // Los elementos que estan dentro del array solo pueden ser de tipo
+            // telefono
+            // Pero pueden instanciarse con sus clases hijas haciendo polimorfismo
+            // Y sobrescribiendo los metodos de Telefono en run-time
             System.out.println(String.format("\nTelefono %d", ++j));
             System.out.println(String.format("\tModelo del telefono %s", movil.getModelo()));
         }
